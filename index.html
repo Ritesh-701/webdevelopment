@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    scroll-behavior:smooth;
+}
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(15,23,42,.95);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+}
+
+.nav-links li{
+    margin-left:25px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#38bdf8;
+}
+
+.menu{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.hero{ background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)),  url("/IMG/image19.jpg");
+background-size: cover;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:100px 20px;
+    
+    
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:10px;
+}
+
+.hero span{
+    color:#38bdf8;
+}
+
+.hero p{
+    color:#cbd5e1;
+    margin:20px 0;
+    font-size:18px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 30px;
+    background:#38bdf8;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+section{
+    padding:90px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    color:#38bdf8;
+    margin-bottom:40px;
+}
+
+.about{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+}
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.skill-box{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    transition:.3s;
+}
+
+.skill-box:hover{
+    transform:translateY(-8px);
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    background:#1e293b;
+    border-radius:15px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+}
+
+.project-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.project-card .content{
+    padding:20px;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact form{
+    max-width:600px;
+    margin:auto;
+}
+
+.contact input,
+.contact textarea{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+}
+
+.contact button{
+    padding:12px 30px;
+    border:none;
+    background:#38bdf8;
+    color:white;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#1e293b;
+}
+
+@media(max-width:768px){
+
+    .menu{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:70px;
+        right:-100%;
+        width:220px;
+        background:#1e293b;
+        flex-direction:column;
+        text-align:center;
+        transition:.4s;
+    }
+
+    .nav-links.active{
+        right:0;
+    }
+
+    .nav-links li{
+        margin:15px 0;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<div class="logo">Ritesh</div>
+
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<div class="menu">☰</div>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div>
+<h1>Hi, I'm <span>Ritesh</span></h1>
+<p>Frontend Developer & UI Designer</p>
+<h3> You can see that my project then click them on project according your hover enjoy and contact me</h3><br>
+<a href="#projects" class="btn">View Projects</a>
+</div>
+</section>
+
+<section id="about">
+<h2 class="section-title">About Me</h2>
+<div class="about">
+<p>
+I am a passionate web developer creating modern, responsive and
+user-friendly websites using HTML, CSS and JavaScript.
+</p>
+</div>
+</section>
+
+<section id="skills">
+<h2 class="section-title">Skills</h2>
+
+<div class="skills">
+<div class="skill-box">HTML5</div>
+<div class="skill-box">CSS3</div>
+<div class="skill-box">JavaScript</div>
+<div class="skill-box">Responsive Design</div>
+<div class="skill-box">UI Design</div>
+<div class="skill-box">GitHub</div>
+</div>
+</section>
+
+<section id="projects">
+<h2 class="section-title">Projects</h2>
+
+<div class="projects">
+
+<div class="project-card">
+<img src="https://picsum.photos/500/300?1">
+<div class="content">
+<h3>Portfolio Website</h3>
+<p>Modern responsive portfolio design.</p>
+</div>
+</div>
+
+<div class="project-card">
+<a href="index.html"><img src="https://picsum.photos/500/300?2"></a>
+<div class="content">
+<h3>Calculator App</h3>
+<p>Built using HTML, CSS and JavaScript.</p>
+</div>
+</div>
+
+<div class="project-card">
+<a href="index2.html"><img src="https://picsum.photos/500/300?3"></a>
+<div class="content">
+<h3>PDF Generator</h3>
+<p>Create and download PDF files online.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<h2 class="section-title">Contact Me</h2>
+
+<div class="contact">
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea rows="5" placeholder="Your Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Ritesh Portfolio. All Rights Reserved.</p>
+</footer>
+
+<script>
+const menu = document.querySelector(".menu");
+const navLinks = document.querySelector(".nav-links");
+
+menu.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+</script>
+
+</body>
+</html>
